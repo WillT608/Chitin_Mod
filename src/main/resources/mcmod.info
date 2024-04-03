@@ -6,7 +6,7 @@
 		"description": "An example mod for Minecraft 1.7.10 with Forge focused on a stable setup.",
 		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
-		"url": "https://github/WillT608/Chitin_Mod_1.7.10",
+		"url": "https://github.com/WillT608/Chitin_Mod",
 		"updateUrl": "",
 		"authorList": ["WillT608"],
 		"credits": "",

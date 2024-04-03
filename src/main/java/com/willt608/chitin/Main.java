@@ -1,17 +1,26 @@
 package com.willt608.chitin;
 
 // import com.willt608.chitin.Tags;
+import net.minecraftforge.common.MinecraftForge;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.willt608.chitin.init.ChitinLivingDrops;
 import com.willt608.chitin.init.Items;
 import com.willt608.chitin.init.Recipes;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "chitin", name = "Chitin Mod", acceptedMinecraftVersions = "[1.7.10]", useMetadata = true)
+@Mod(
+    modid = "chitin",
+    version = Tags.VERSION,
+    name = "Chitin Mod",
+    acceptedMinecraftVersions = "[1.7.10]",
+    useMetadata = true)
 public class Main {
 
     public static final String MODID = "chitin";
@@ -32,6 +41,7 @@ public class Main {
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         // proxy.init(event);
+        MinecraftForge.EVENT_BUS.register(new ChitinLivingDrops());
     }
 
     @Mod.EventHandler

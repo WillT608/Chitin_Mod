@@ -1,12 +1,19 @@
 package com.willt608.chitin.init;
 
-import com.willt608.chitin.item.*;
-import com.google.common.base.CaseFormat;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-@SuppressWarnings({"WeakerAccess", "PublicField"})
+import com.google.common.base.CaseFormat;
+import com.willt608.chitin.item.ItemChitinArmor;
+import com.willt608.chitin.item.ItemChitinAxe;
+import com.willt608.chitin.item.ItemChitinHoe;
+import com.willt608.chitin.item.ItemChitinPickaxe;
+import com.willt608.chitin.item.ItemChitinShell;
+import com.willt608.chitin.item.ItemChitinShovel;
+import com.willt608.chitin.item.ItemChitinSword;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@SuppressWarnings({ "WeakerAccess", "PublicField" })
 public class Items {
 
     public static Item chitinShell;
@@ -23,8 +30,7 @@ public class Items {
     public static Item chitinAxe;
     public static Item chitinHoe;
 
-    private Items() {
-    }
+    private Items() {}
 
     public static void preInit() {
         chitinShell = new ItemChitinShell();
@@ -41,7 +47,7 @@ public class Items {
         chitinAxe = new ItemChitinAxe();
         chitinHoe = new ItemChitinHoe();
 
-        register (chitinShell, "chitinShell");
+        register(chitinShell, "chitinShell");
 
         register(chitinSword, "chitinSword");
 
